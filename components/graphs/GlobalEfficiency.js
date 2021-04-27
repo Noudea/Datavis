@@ -12,6 +12,12 @@ const GlobalEfficiency = (props) => {
             title: {
                 text: 'Efficiency'
             },
+            toolbox: {
+                feature: {
+                    dataView: {show: true, readOnly: false},
+                    saveAsImage: {show: true}
+                }
+            },
             tooltip: {
                 trigger: 'axis'
             },

@@ -17,6 +17,7 @@ const Line = (props) => {
                 feature: {
                     dataView: {show: true, readOnly: false},
                     magicType: {show: true, type: ['line', 'bar']},
+                    dataZoom:{show : true},
                     restore: {show: true},
                     saveAsImage: {show: true}
                 }
