@@ -1,8 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
-import { Button } from 'rsuite';
 import * as echarts from 'echarts';
-import data from '../../data/data'
 
 import {useEffect , useState } from 'react'
 
@@ -14,7 +11,7 @@ const LineSales = (props) => {
         option = {
             xAxis: {
                 type: 'category',
-                data: ['round 1', 'round 2', 'round 3', 'round 4', 'round 5']
+                data: ['round 0','round 1', 'round 2', 'round 3', 'round 4', 'round 5']
             },
             toolbox: {
                 feature: {
@@ -38,7 +35,7 @@ const LineSales = (props) => {
                 {
                     type: 'value',
                     name: 'turnover, salaries, non quality, tools expenses, operating result',
-                    min: -225640,
+                    min: -336681,
                     max: 500000,
                     interval: 100000,
                     axisLabel: {
@@ -56,50 +53,45 @@ const LineSales = (props) => {
                 {
                     name: 'selling price',
                     type: 'line',
-                    data: [1750, 1750, 1909, 1909, 2045]
+                    data: [1613,1750, 1750, 1909, 1909, 2045]
                 },
                 {
                     name: 'direct unit cost',
                     type: 'line',
-                    data: [826, 787, 748, 738, 602]
+                    data: [865,826, 787, 748, 738, 602]
                 },
                 {
                     name: 'salaries',
                     type: 'line',
                     yAxisIndex : 1,
-                    data: [571593, 602875, 648375, 673968, 685343]
+                    data: [597187,571593, 602875, 648375, 673968, 685343]
                 },
                 {
                     name: 'turnover',
                     type: 'line',
                     yAxisIndex : 1,
-                    data: [1114750, 1391250, 1517727, 1517727, 1626136]
+                    data: [1027886,1114750, 1391250, 1517727, 1517727, 1626136]
                 },
                 {
                     name: 'non quality',
                     type: 'line',
                     yAxisIndex : 1,
-                    data: [92394, 87335, 73624, 68029, 47929]
+                    data: [111499,92394, 87335, 73624, 68029, 47929]
                 },
                 {
-                    name: 'tools expenses',
+                    name: 'tools cost',
                     type: 'line',
                     yAxisIndex : 1,
-                    data: [50000, 40000, 30000, 30000, 30000]
+                    data: [0,50000, 40000, 30000, 30000, 30000]
                 },
                 {
                     name: 'operating result',
                     type: 'line',
                     yAxisIndex : 1,
-                    data: [-225640, 1901, 139140, 127279, 358337]
+                    data: [-336681,-225640, 1901, 139140, 127279, 358337]
                 },
         ]
         };
-
-        // data.occurence.forEach(element => {
-        //     option.series[0].data.push(element)
-        // });
-        // console.log(option.series[0].data)
         option && myChart.setOption(option);
 
         return () => {

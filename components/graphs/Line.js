@@ -1,8 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
-import { Button } from 'rsuite';
 import * as echarts from 'echarts';
-import data from '../../data/data'
 
 import {useEffect , useState } from 'react'
 
@@ -14,7 +11,7 @@ const Line = (props) => {
         option = {
             xAxis: {
                 type: 'category',
-                data: ['round 1', 'round 2', 'round 3', 'round 4', 'round 5']
+                data: ['round 0','round 1', 'round 2', 'round 3', 'round 4', 'round 5']
             },
             toolbox: {
                 feature: {
@@ -37,17 +34,22 @@ const Line = (props) => {
                 {
                     name: 'units sold',
                     type: 'line',
-                    data: [795, 795, 795, 795, 637]
+                    data: [637, 637, 795, 795, 795,795]
                 },
                 {
                     name: 'units produced',
                     type: 'line',
-                    data: [837, 837, 837, 837, 758]
+                    data: [758, 758, 837, 837, 837,837]
                 },
                 {
                     name: 'production capacity',
                     type: 'line',
-                    data: [837, 837, 837, 837, 758]
+                    data:  [758, 758, 837, 837, 837,837]
+                },
+                {
+                    name: 'direct unit cost',
+                    type: 'line',
+                    data:  [865, 826, 787, 748, 738,602]
                 },
         ]
         };

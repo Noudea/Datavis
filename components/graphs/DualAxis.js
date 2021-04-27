@@ -1,8 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
-import { Button } from 'rsuite';
 import * as echarts from 'echarts';
-import data from '../../data/data'
 
 import {useEffect , useState } from 'react'
 
@@ -35,7 +32,7 @@ const DualAxis = () => {
             xAxis: [
                 {
                     type: 'category',
-                    data: ['round 1', 'round 2', 'round 3', 'round 4', 'round 5'],
+                    data: ['round 0','round 1', 'round 2', 'round 3', 'round 4', 'round 5'],
                     axisPointer: {
                         type: 'shadow'
                     }
@@ -67,23 +64,23 @@ const DualAxis = () => {
                 {
                     name: 'units sold',
                     type: 'bar',
-                    data: [795, 795, 795, 795, 637]
+                    data: [637, 637, 795, 795, 795,795]
                 },
                 {
                     name: 'units produced',
                     type: 'bar',
-                    data: [837, 837, 837, 837, 758]
+                    data: [758, 758, 837, 837, 837,837]
                 },
                 {
                     name: 'production capacity',
                     type: 'bar',
-                    data: [837, 837, 837, 837, 758]
+                    data: [758, 758, 837, 837, 837,837]
                 },
                 {
                     name: 'operating results',
                     type: 'line',
                     yAxisIndex : 1,
-                    data: [-225640, 1901, 139140,127279,359337]
+                    data: [-336681,-225640, 1901, 139140,127279,358337]
                 },
             ]
         };
@@ -98,7 +95,7 @@ const DualAxis = () => {
             console.log('clean up')
         }
 
-    },[data])
+    },[])
     
     
     

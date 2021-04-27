@@ -1,15 +1,11 @@
 import React from 'react';
-import Head from 'next/head';
-import { Button, SelectPicker } from 'rsuite';
 import 'rsuite/lib/styles/index.less';
 
 import {useEffect , useState } from 'react'
-
-
-import data from '../data/data'
 import DualAxis from '../components/graphs/DualAxis';
 import Line from '../components/graphs/Line'
 import LineSales from '../components/graphs/LineSales';
+import GlobalEfficiency from '../components/graphs/GlobalEfficiency';
 
 const Home = () => {
 
@@ -34,8 +30,7 @@ const Home = () => {
     {selectValue ==='production' ? <Line></Line> : null}
     {selectValue ==='sales' ? <LineSales></LineSales> : null }
     {selectValue ==='production and operating results' ?     <DualAxis></DualAxis> : null }
-    
-    
+    <GlobalEfficiency></GlobalEfficiency>
     
     </>)
 }
