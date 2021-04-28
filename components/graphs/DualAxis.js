@@ -10,7 +10,7 @@ const DualAxis = () => {
         let option;
         option = {
             title: {
-                text: 'Production and operating results'
+                text: 'Global'
             },
             tooltip: {
                 trigger: 'axis',
