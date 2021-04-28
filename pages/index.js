@@ -6,6 +6,8 @@ import DualAxis from '../components/graphs/DualAxis';
 import Line from '../components/graphs/Line'
 import LineSales from '../components/graphs/LineSales';
 import GlobalEfficiency from '../components/graphs/GlobalEfficiency';
+import Cost from '../components/graphs/Cost';
+import TurnOver from '../components/graphs/TurnOver';
 
 const Home = () => {
 
@@ -13,7 +15,7 @@ const Home = () => {
         setSelectValue(event.target.value);
     }
 
-    const [selectValue,setSelectValue] = useState('production')
+    const [selectValue,setSelectValue] = useState('production and operating results')
 
 
     useEffect(() => {
@@ -22,16 +24,19 @@ const Home = () => {
 
     return(<>
     <select value={selectValue} onChange={handleChange} id="monselect">
-        <option value="production" defaultValue>Production</option>
-        <option value="sales">sales</option>
-        <option value="production and operating results">production and operating results</option>
+        <option value="production and operating results" defaultValue>Production and operating results</option>
+        <option value="production">Production through rounds</option>
+        <option value="sales">Sales through rounds</option>
+        <option value="cost">Unit cost through rounds</option>
+        <option value="turnover">Turnover and operating result evolution through rounds</option>
     </select>
     
     {selectValue ==='production' ? <Line></Line> : null}
     {selectValue ==='sales' ? <LineSales></LineSales> : null }
-    {selectValue ==='production and operating results' ?     <DualAxis></DualAxis> : null }
+    {selectValue ==='production and operating results' ? <DualAxis></DualAxis> : null }
+    {selectValue ==='cost' ? <Cost></Cost> : null }
+    {selectValue ==='turnover' ? <TurnOver></TurnOver> : null }
     <GlobalEfficiency></GlobalEfficiency>
-    
     </>)
 }
 

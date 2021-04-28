@@ -9,9 +9,15 @@ const LineSales = (props) => {
         let myChart = echarts.init(document.getElementById('graphLineSales'));
         let option 
         option = {
+            title: {
+                text: 'Sales'
+            },
             xAxis: {
                 type: 'category',
                 data: ['round 0','round 1', 'round 2', 'round 3', 'round 4', 'round 5']
+            },
+            legend: {
+                data: ['selling price', 'direct unit cost', 'salaries','turnover','non quality','tools cost','operating result']
             },
             toolbox: {
                 feature: {
@@ -46,9 +52,6 @@ const LineSales = (props) => {
             ],
             tooltip: {
                 trigger: 'axis'
-            },
-            legend: {
-                data: ['units sold', 'units produced', 'production capacity']
             },
             series: [
                 {

@@ -3,14 +3,14 @@ import * as echarts from 'echarts';
 
 import {useEffect , useState } from 'react'
 
-const Line = (props) => {
+const TurnOver = (props) => {
 
         useEffect(() =>{
-        let myChart = echarts.init(document.getElementById('graphLine'));
+        let myChart = echarts.init(document.getElementById('turnOver'));
         let option = props.option
         option = {
             title: {
-                text: 'Production'
+                text: 'Title'
             },
             xAxis: {
                 type: 'category',
@@ -32,29 +32,19 @@ const Line = (props) => {
                 trigger: 'axis'
             },
             legend: {
-                data: ['units sold', 'units produced', 'production capacity']
+                data: ['turnover', 'operating result']
             },
             series: [
                 {
-                    name: 'units sold',
-                    type: 'line',
-                    data: [637, 637, 795, 795, 795,795]
+                    name: 'turnover',
+                    type: 'bar',
+                    data: [ 1027886, 1114750, 1391250, 1517727, 1517727,1626136]
                 },
                 {
-                    name: 'units produced',
-                    type: 'line',
-                    data: [758, 758, 837, 837, 837,837]
-                },
-                {
-                    name: 'production capacity',
-                    type: 'line',
-                    data:  [758, 758, 837, 837, 837,837]
-                },
-                {
-                    name: 'direct unit cost',
-                    type: 'line',
-                    data:  [865, 826, 787, 748, 738,602]
-                },
+                    name: 'operating result',
+                    type: 'bar',
+                    data: [-336681, -225640, 1901, 139140, 127279,358337]
+                }
         ]
         };
 
@@ -75,17 +65,17 @@ const Line = (props) => {
     
     return(<>
     <style jsx>{`
-            #graphLine {
+            #turnOver {
                 width:1200px;
                 min-height:500px;
             }
         
         `}</style>
-    <div id='graphLine'></div>
+    <div id='turnOver'></div>
     
     
     
     </>)
 }
 
-export default Line
+export default TurnOver

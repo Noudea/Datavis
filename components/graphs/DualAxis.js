@@ -9,6 +9,9 @@ const DualAxis = () => {
         let myChart = echarts.init(document.getElementById('graph'));
         let option;
         option = {
+            title: {
+                text: 'Production and operating results'
+            },
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {

@@ -3,14 +3,14 @@ import * as echarts from 'echarts';
 
 import {useEffect , useState } from 'react'
 
-const Line = (props) => {
+const Cost = (props) => {
 
         useEffect(() =>{
-        let myChart = echarts.init(document.getElementById('graphLine'));
+        let myChart = echarts.init(document.getElementById('cost'));
         let option = props.option
         option = {
             title: {
-                text: 'Production'
+                text: 'Unit cost'
             },
             xAxis: {
                 type: 'category',
@@ -32,29 +32,19 @@ const Line = (props) => {
                 trigger: 'axis'
             },
             legend: {
-                data: ['units sold', 'units produced', 'production capacity']
+                data: ['tools cost', 'non quality cost']
             },
             series: [
                 {
-                    name: 'units sold',
-                    type: 'line',
-                    data: [637, 637, 795, 795, 795,795]
+                    name: 'tools cost',
+                    type: 'bar',
+                    data: [0, 50000, 40000, 30000, 30000,30000]
                 },
                 {
-                    name: 'units produced',
-                    type: 'line',
-                    data: [758, 758, 837, 837, 837,837]
-                },
-                {
-                    name: 'production capacity',
-                    type: 'line',
-                    data:  [758, 758, 837, 837, 837,837]
-                },
-                {
-                    name: 'direct unit cost',
-                    type: 'line',
-                    data:  [865, 826, 787, 748, 738,602]
-                },
+                    name: 'non quality cost',
+                    type: 'bar',
+                    data: [111499, 92394, 87335, 73624, 68029,47929]
+                }
         ]
         };
 
@@ -75,17 +65,17 @@ const Line = (props) => {
     
     return(<>
     <style jsx>{`
-            #graphLine {
+            #cost {
                 width:1200px;
                 min-height:500px;
             }
         
         `}</style>
-    <div id='graphLine'></div>
+    <div id='cost'></div>
     
     
     
     </>)
 }
 
-export default Line
+export default Cost
