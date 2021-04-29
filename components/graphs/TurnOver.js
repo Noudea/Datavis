@@ -10,7 +10,7 @@ const TurnOver = (props) => {
         let option = props.option
         option = {
             title: {
-                text: 'Title'
+                text: 'turnover and operating results'
             },
             xAxis: {
                 type: 'category',
