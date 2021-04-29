@@ -57,7 +57,7 @@ const DualAxis = () => {
                     type: 'value',
                     name: '€',
                     position : 'right',
-                    min: 0,
+                    min: -336681,
                     max: 400000,
                     interval: 100000,
                     axisLabel: {

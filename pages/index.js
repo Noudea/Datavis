@@ -15,7 +15,7 @@ const Home = () => {
         setSelectValue(event.target.value);
     }
 
-    const [selectValue,setSelectValue] = useState('production and operating results')
+    const [selectValue,setSelectValue] = useState('Global')
 
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const Home = () => {
 
     return(<>
     <select value={selectValue} onChange={handleChange} id="monselect">
-        <option value="production and operating results" defaultValue>Production and operating results</option>
+        <option value="Global" defaultValue>Global</option>
         <option value="production">Production through rounds</option>
         <option value="sales">Sales through rounds</option>
         <option value="cost">Unit cost through rounds</option>
@@ -33,7 +33,7 @@ const Home = () => {
     
     {selectValue ==='production' ? <Line></Line> : null}
     {selectValue ==='sales' ? <LineSales></LineSales> : null }
-    {selectValue ==='production and operating results' ? <DualAxis></DualAxis> : null }
+    {selectValue ==='Global' ? <DualAxis></DualAxis> : null }
     {selectValue ==='cost' ? <Cost></Cost> : null }
     {selectValue ==='turnover' ? <TurnOver></TurnOver> : null }
     <GlobalEfficiency></GlobalEfficiency>
