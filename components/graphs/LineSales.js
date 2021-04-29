@@ -43,8 +43,8 @@ const LineSales = (props) => {
                     type: 'value',
                     name: 'turnover, salaries, non quality, tools expenses, operating result',
                     min: -336681,
-                    max: 500000,
-                    interval: 100000,
+                    max: 1626136,
+                    interval: 200000,
                     axisLabel: {
                         formatter: '{value} €'
                     }
@@ -65,16 +65,16 @@ const LineSales = (props) => {
                     data: [865,826, 787, 748, 738, 602]
                 },
                 {
-                    name: 'salaries',
-                    type: 'line',
-                    yAxisIndex : 1,
-                    data: [597187,571593, 602875, 648375, 673968, 685343]
-                },
-                {
                     name: 'turnover',
                     type: 'line',
                     yAxisIndex : 1,
                     data: [1027886,1114750, 1391250, 1517727, 1517727, 1626136]
+                },
+                {
+                    name: 'salaries',
+                    type: 'line',
+                    yAxisIndex : 1,
+                    data: [597187,571593, 602875, 648375, 673968, 685343]
                 },
                 {
                     name: 'non quality',
